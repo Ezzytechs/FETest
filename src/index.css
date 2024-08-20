@@ -1,0 +1,22 @@
+@font-face {
+  font-family: lato;
+  src: url(./assets//fonts/latoRegular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: white;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+a {
+  font-family: "lato", sans-serif !important;
+}
+a:active {
+  color: black !important;
+}

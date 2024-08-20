@@ -1,0 +1,32 @@
+.FeedBackContainer {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  width: 90vh;
+  max-width: 500px;
+  height: 98vh;
+  transition: all 200ms ease-in-out;
+  z-index: 1000;
+
+  &.Show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.Hide {
+    opacity: 0;
+    transform: translateY(-80%);
+    z-index: 0;
+  }
+}
+
+.FeedBackInfo {
+  width: 70%;
+  max-width: 600px;
+  margin: auto;
+  color: black;
+  background: white;
+  padding-top: 15px;
+  position: fixed;
+  text-align: center;
+}

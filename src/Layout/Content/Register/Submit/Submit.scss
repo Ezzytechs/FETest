@@ -1,0 +1,26 @@
+.ButtonDiv {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    padding: 8px 30px;
+    background: rgb(2, 63, 2);
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 10px 0px;
+    width: 70%;
+    height: 40px;
+    &:hover {
+      background: green;
+    }
+  }
+  .Next {
+    background: #ccc;
+    color: black;
+  }
+}

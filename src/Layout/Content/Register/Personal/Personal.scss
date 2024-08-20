@@ -1,0 +1,242 @@
+.personal-page {
+  display: flex;
+  height: 100%;
+  background-color: #f8f8f8;
+  .left-section {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    position: sticky;
+    top: 0;
+    padding: 50px;
+    height: 90vh;
+    img {
+      width: 70%;
+      height: auto;
+      max-height: 80vh;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Right section with form
+  .right-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    .form {
+      max-width: 400px;
+      margin: auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .form-group,
+      .PhoneGroup {
+        margin-bottom: 20px;
+      }
+      .weak-pass {
+        border-color: red !important;
+      }
+      h5 {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+      .highlightText {
+        color: red;
+        padding-top: 10px;
+      }
+      .text {
+        padding-top: 10px;
+      }
+      .error {
+        margin: 0;
+        color: red;
+      }
+      label {
+        font-size: 1em;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      // Form actions
+      .form-actions {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 15px 20px;
+          font-size: 1em;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          color: #fff;
+        }
+
+        .back-button {
+          background-color: #ccc;
+        }
+
+        .submit-button {
+          background-color: #28a745;
+
+          &:disabled {
+            background-color: rgba(0, 128, 0, 0.274);
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  // Gender selection styling
+  .gender-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    label {
+      display: flex !important;
+      align-items: center;
+
+      input {
+        margin-right: 5px;
+        accent-color: green;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  // Profile picture upload
+  .profile {
+    display: flex;
+    align-items: center;
+
+    .user {
+      margin-right: 10px;
+      color: #aaa;
+    }
+
+    .profile-preview {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    input {
+      margin-left: 10px;
+    }
+  }
+
+  // Same group styling for fields
+  .sameGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    .form-group {
+      width: 48%;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 0;
+
+      .form-group {
+        width: 100%;
+      }
+    }
+  }
+
+  // Phone number and country code layout
+  .PhoneGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row !important;
+    flex-shrink: 1;
+
+    .country-select {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      appearance: none; // Removes the default arrow
+
+      background-color: #fff;
+      background-image: url("data:image/svg+xml;base64,..."); // You can add a custom SVG arrow here
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+
+      select {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .tel {
+      width: 70%;
+      input {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .countryFlags,
+      .tel {
+        width: 100%;
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 1024px) {
+    .right-section {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .right-section {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .right-section {
+      padding: 10px;
+
+      form {
+        .form-actions {
+          flex-direction: column;
+
+          button {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
